@@ -1,4 +1,15 @@
-venv/
+.venv/
 __pycache__/
+*.py[cod]
+
 .env
-*.pyc
+
+.pytest_cache/
+.mypy_cache/
+
+.DS_Store
+
+qdrant_storage/
+
+data/*
+!data/.gitkeep
