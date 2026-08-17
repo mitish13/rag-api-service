@@ -1,6 +1,12 @@
 fastapi
 uvicorn
+python-multipart
+pymupdf
 sentence-transformers
 qdrant-client
 python-dotenv
 pytest
+ollama
+pydantic-settings
+pytest
+httpx
