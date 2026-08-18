@@ -1,6 +1,6 @@
 from pathlib import Path
 
-import fitz
+import pymupdf
 
 
 SUPPORTED_EXTENSIONS = {".pdf", ".txt"}
@@ -31,7 +31,7 @@ def extract_text(filename: str, content: bytes) -> list[dict]:
 
 
 def extract_pdf(content: bytes) -> list[dict]:
-    document = fitz.open(
+    document = pymupdf.open(
         stream=content,
         filetype="pdf",
     )

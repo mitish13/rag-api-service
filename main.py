@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from services.qdrant import initialize_collection
 from contextlib import asynccontextmanager
+from api.add import router as add_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -18,9 +19,8 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-@app.on_event("startup")
-def startup_event():
-    initialize_collection()
+app.include_router(add_router)
+
     
 @app.get("/")
 def home():
