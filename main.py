@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from services.qdrant import initialize_collection
 from contextlib import asynccontextmanager
 from api.add import router as add_router
+from api.ask import router as ask_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -20,6 +21,7 @@ app = FastAPI(
 )
 
 app.include_router(add_router)
+app.include_router(ask_router)
 
     
 @app.get("/")
