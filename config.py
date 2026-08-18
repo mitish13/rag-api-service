@@ -6,7 +6,7 @@ class Settings(BaseSettings):
     qdrant_collection: str = "documents"
 
     ollama_host: str = "http://localhost:11434"
-    ollama_model: str = "gemma3:4b"
+    ollama_model: str = "gemma4"
 
     embedding_model: str = "BAAI/bge-small-en-v1.5"
 
